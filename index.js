@@ -11,6 +11,12 @@ file.use(express.json())
 
 const PORT = process.env.PORT || 4000
 
+file.get("/",function(request,response){
+   
+    response.send('search in url as \n 1) "/get-file/:filename" - To get a data from file,\n 2) "/create-file" - To create file \n 3) "/add-data/:filename" - To add data to the file \n 4) "/delete-file/:filename" - To delete a file')
+   
+})
+
 //geting data form a file
 file.get("/get-file/:filename",function(request,response){
    
